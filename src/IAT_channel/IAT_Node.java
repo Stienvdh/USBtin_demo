@@ -6,6 +6,8 @@ import de.fischl.usbtin.USBtin;
 import de.fischl.usbtin.USBtinException;
 import error_correction.ErrorCorrectionCode;
 
+import java.util.List;
+
 public class IAT_Node extends USBtin {
 
     private long PERIOD;
@@ -49,7 +51,7 @@ public class IAT_Node extends USBtin {
     }
 
     public long getTimeToSleep() {
-        byte[] auth_bytes = this.AUTH_MESSAGE.toByteArray();
+        List<Byte> auth_bytes = this.AUTH_MESSAGE.toByteArray();
 
         // wrap-arounds
         if (placeInWindow >= WINDOW_LENGTH) {
@@ -57,18 +59,18 @@ public class IAT_Node extends USBtin {
             placeInWindow = 0;
         }
 
-        if (indexInAuthMessage > auth_bytes.length+1) {
+        if (indexInAuthMessage > auth_bytes.size()+1) {
             indexInAuthMessage = 0;
         }
 
         placeInWindow += 1;
 
         // silence bits
-        if (indexInAuthMessage == 0 || indexInAuthMessage == auth_bytes.length+1) {
+        if (indexInAuthMessage == 0 || indexInAuthMessage == auth_bytes.size()+1) {
             return PERIOD;
         }
 
-        if (auth_bytes[indexInAuthMessage-1] == 0) {
+        if (auth_bytes.get(indexInAuthMessage-1).equals( (byte) 0)) {
             return PERIOD + DELTA;
         }
 

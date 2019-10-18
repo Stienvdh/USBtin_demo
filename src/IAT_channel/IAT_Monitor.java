@@ -121,7 +121,16 @@ public class IAT_Monitor implements CANMessageListener {
                     System.out.println("Error in transmission detected!");
                 }
 
+                CANAuthMessage canAuthMessage = this.corrector==null ?
+                        new CANAuthMessage(authMessage) :
+                        new CANAuthMessage(authMessage.subList(0,
+                                authMessage.size() - this.corrector.getNrCorrectingBits()));
 
+                // check attestation
+                if (this.protocol.checkAttestationMessage(canAuthMessage)) {
+                    System.out.println("Attestation OK");
+                }
+                else { System.out.println("Attestation NOK"); }
             }
             authMessage = new LinkedList<>();
             detecting = !detecting;

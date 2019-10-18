@@ -2,12 +2,15 @@ package IAT_channel;
 
 import error_correction.ErrorCorrectionCode;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class CANAuthMessage {
 
-    private byte[] message = new byte[0];
-    private byte[] correctionCode = new byte[0];
+    private List<Byte> message = new LinkedList<Byte>();
+    private List<Byte> correctionCode = new LinkedList<Byte>();
 
-    public CANAuthMessage(byte[] message) {
+    public CANAuthMessage(List<Byte> message) {
         this.message = message;
     }
 
@@ -15,14 +18,14 @@ public class CANAuthMessage {
         this.correctionCode = corrector.getCodeForAuthMessage(this);
     }
 
-    public byte[] toByteArray() {
-        byte[] result = new byte[this.message.length + this.correctionCode.length];
-        System.arraycopy(this.message, 0, result, 0, this.message.length);
-        System.arraycopy(this.correctionCode, 0, result, this.message.length, this.correctionCode.length);
+    public List<Byte> toByteArray() {
+        List<Byte> result = new LinkedList<>();
+        result.addAll(this.message);
+        result.addAll(this.correctionCode);
         return result;
     }
 
-    public byte[] getMessage() {
+    public List<Byte> getMessage() {
         return this.message;
     }
 

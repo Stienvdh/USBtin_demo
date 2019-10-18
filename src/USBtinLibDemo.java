@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class USBtinLibDemo {
 
-    private static final long PERIOD = 20;
-    private static final long NOISE_PERIOD = 200; // NOISE_PERIOD=0 --> no noise
+    private static final long PERIOD = 15;
+    private static final long NOISE_PERIOD = 1; // NOISE_PERIOD=0 --> no noise
     private static final long DELTA = 10;
     private static final int WINDOW_LENGTH = 4;
     private static final int CHANNEL = 50000;

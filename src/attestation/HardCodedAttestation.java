@@ -3,12 +3,18 @@ package attestation;
 import IAT_channel.CANAuthMessage;
 import de.fischl.usbtin.USBtin;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class HardCodedAttestation implements AttestationProtocol {
 
-    private byte[] message;
+    private List<Byte> message;
 
     public HardCodedAttestation(byte[] mess) {
-        this.message = mess;
+        this.message = new LinkedList<>();
+        for (int i=0; i<mess.length; i++) {
+            this.message.add(mess[i]);
+        }
     }
 
     @Override
@@ -17,6 +23,7 @@ public class HardCodedAttestation implements AttestationProtocol {
     }
 
     @Override
-    public void checkAttestationMessage(CANAuthMessage message) {
+    public boolean checkAttestationMessage(CANAuthMessage message) {
+        return this.message.equals(message.getMessage());
     }
 }

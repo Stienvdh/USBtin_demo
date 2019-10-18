@@ -6,5 +6,5 @@ import de.fischl.usbtin.USBtin;
 public interface AttestationProtocol {
     CANAuthMessage getAttestationMessage(USBtin node);
 
-    void checkAttestationMessage(CANAuthMessage message);
+    boolean checkAttestationMessage(CANAuthMessage message);
 }

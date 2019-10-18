@@ -2,6 +2,7 @@ package error_correction;
 
 import IAT_channel.CANAuthMessage;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class SimpleParity implements ErrorCorrectionCode {
@@ -12,15 +13,17 @@ public class SimpleParity implements ErrorCorrectionCode {
     }
 
     @Override
-    public byte[] getCodeForAuthMessage(CANAuthMessage message) {
+    public List<Byte> getCodeForAuthMessage(CANAuthMessage message) {
         int paritycounter = 0;
-        for (int i=0 ; i<message.getMessage().length ; i++) {
-            if (message.getMessage()[i] == 1) {
+        for (int i=0 ; i<message.getMessage().size() ; i++) {
+            if (message.getMessage().get(i) == ((byte) 1)) {
                 paritycounter += 1;
             }
         }
-        if (paritycounter%2 == 0) { return new byte[]{0}; }
-        return new byte[]{1};
+        List<Byte> result = new LinkedList<Byte>();
+        if (paritycounter%2 == 0) { result.add( (byte) 0 ); }
+        else { result.add( (byte) 1 ); }
+        return result;
     }
 
     @Override

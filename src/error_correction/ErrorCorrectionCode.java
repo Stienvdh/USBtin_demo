@@ -9,7 +9,7 @@ public interface ErrorCorrectionCode {
 
     int getNrCorrectingBits();
 
-    byte[] getCodeForAuthMessage(CANAuthMessage message);
+    List<Byte> getCodeForAuthMessage(CANAuthMessage message);
 
     boolean checkCodeForAuthMessage(List<Byte> message);
 }
