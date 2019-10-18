@@ -3,6 +3,7 @@ package IAT_channel;
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.USBtin;
 import de.fischl.usbtin.USBtinException;
+import error_correction.ErrorCorrectionCode;
 
 public class IATThread extends Thread {
 
@@ -19,6 +20,7 @@ public class IATThread extends Thread {
     private USBtin receiver;
     private IAT_Node sender;
     private IAT_Monitor monitor;
+    private ErrorCorrectionCode corrector;
 
     public IATThread(long period, long delta, int window_length, int watchid, String sender, String receiver, int channel,
                      CANMessage mess, long nperiod) {
@@ -34,6 +36,10 @@ public class IATThread extends Thread {
         this.message = mess;
     }
 
+    public void addAuthCorrectionCode(ErrorCorrectionCode corrector) {
+        this.corrector = corrector;
+    }
+
     public void run() {
         try {
             // create the instances
@@ -44,6 +50,12 @@ public class IATThread extends Thread {
             this.sender = sender;
             this.receiver = listener;
             this.monitor = monitor;
+
+            // add authentication error correction
+            if (this.corrector != null) {
+                this.sender.setCorrector(this.corrector);
+                this.monitor.setCorrector(this.corrector);
+            }
 
             // connect to USBtin and open CAN channel in Active-Mode
             sender.connect(SENDER_PORT);

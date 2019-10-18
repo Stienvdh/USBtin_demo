@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8055e118-9048-49a7-a4f5-66851d599956" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IAT_channel/IATThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/noise/NoiseThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/noise/Noise_node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IAT_channel/CANAuthMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/error_correction/ErrorCorrectionCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/error_correction/SimpleParity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IATThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IATThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IAT_Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IAT_Monitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IAT_Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IAT_Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IAT_channel/IATThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IAT_channel/IATThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/USBtinLibDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USBtinLibDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N10.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,85 +68,43 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="21" />
-          <entry key="java" value="14" />
+          <entry key="csv" value="23" />
+          <entry key="java" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="14" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="JAVA" value="21" />
+          <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="3320" />
+          <entry key="java" value="5417" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3320" />
+          <entry key="JAVA" value="5417" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="USBtinLibDemo_IAT_noise" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="210">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/noise/Noise_node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/IAT_channel/IAT_Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -152,6 +114,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -166,12 +129,15 @@
         <option value="$PROJECT_DIR$/src/IAT_Monitor.java" />
         <option value="$PROJECT_DIR$/src/IAT_noise.java" />
         <option value="$PROJECT_DIR$/src/NoiseThread.java" />
-        <option value="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" />
         <option value="$PROJECT_DIR$/src/noise/NoiseThread.java" />
-        <option value="$PROJECT_DIR$/src/IAT_channel/IATThread.java" />
         <option value="$PROJECT_DIR$/src/noise/Noise_node.java" />
-        <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
+        <option value="$PROJECT_DIR$/src/IAT_channel/IATThread.java" />
+        <option value="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" />
+        <option value="$PROJECT_DIR$/src/IAT_channel/CANAuthMessage.java" />
+        <option value="$PROJECT_DIR$/src/error_correction/ErrorCorrectionCode.java" />
+        <option value="$PROJECT_DIR$/src/error_correction/SimpleParity.java" />
         <option value="$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
       </list>
     </option>
   </component>
@@ -196,7 +162,18 @@
             <path>
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
               <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
+              <item name="reliability" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="error_correction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
@@ -221,11 +198,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571382062786" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571397640526" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/timings" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -286,17 +268,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22460657" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2911302" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" side_tool="true" weight="0.3297568" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3385542" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30963856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -314,6 +297,34 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739628" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3566265" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -327,16 +338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IAT_channel/IATThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -405,13 +406,10 @@
     <entry file="file://$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N20.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IAT_channel/IAT_Node.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="173">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
@@ -425,27 +423,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/IAT_channel/IATThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        <state relative-caret-position="855">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IAT_channel/IAT_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/error_correction/SimpleParity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/error_correction/ErrorCorrectionCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/IAT_channel/CANAuthMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="390">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#162#163#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel_P20_D10_C50000_N10.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-382" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="2040">
+          <caret line="136" column="39" selection-start-line="136" selection-start-column="39" selection-end-line="136" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3488#3489#0" expanded="true" />
+            <element signature="e#3530#3531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel_P20_D10_C50000_N200.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

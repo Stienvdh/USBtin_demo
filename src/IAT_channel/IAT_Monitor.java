@@ -2,6 +2,7 @@ package IAT_channel;
 
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;
+import error_correction.ErrorCorrectionCode;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -21,8 +22,10 @@ public class IAT_Monitor implements CANMessageListener {
     private long lastArrival;
     private List<Long> window = new LinkedList<>();
     private boolean detecting = false;
-    private List<Integer> authMessage = new LinkedList<>();
-    private FileWriter filewriter;
+    private List<Byte> authMessage = new LinkedList<>();
+    private FileWriter filewriterIAT;
+    private FileWriter filewriterREL;
+    private ErrorCorrectionCode corrector;
 
     public IAT_Monitor(long period, long delta, int windowLength, int watchid, int channel, long nperiod) {
         this.PERIOD = period;
@@ -32,9 +35,13 @@ public class IAT_Monitor implements CANMessageListener {
         this.CHANNEL = channel;
         this.NOISE_PERIOD = nperiod;
 
+        // statistics
         try {
             new File("timings").mkdir();
-            this.filewriter = new FileWriter("timings/IAT_" + "P" + PERIOD + "_D" + DELTA + "_C" +
+            new File("reliability").mkdir();
+            this.filewriterIAT = new FileWriter("timings/IAT_" + "P" + PERIOD + "_D" + DELTA + "_C" +
+                    CHANNEL + "_N" + NOISE_PERIOD + ".csv");
+            this.filewriterREL = new FileWriter("reliability/IATrel_" + "P" + PERIOD + "_D" + DELTA + "_C" +
                     CHANNEL + "_N" + NOISE_PERIOD + ".csv");
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,7 +64,7 @@ public class IAT_Monitor implements CANMessageListener {
 
             // Save IAT
             try {
-                this.filewriter.append(IAT + "\n");
+                this.filewriterIAT.append(IAT + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -67,7 +74,7 @@ public class IAT_Monitor implements CANMessageListener {
             // sample running average
             window.add(IAT);
             if (window.size() == WINDOW_LENGTH) {
-                System.out.println("Detected bit: " + detectBit(window));
+                detectBit(window);
                 window = new LinkedList<>();
             }
         }
@@ -82,19 +89,35 @@ public class IAT_Monitor implements CANMessageListener {
 
         if (detecting) {
             if (avg >= PERIOD + DELTA/2.0) {
-                authMessage.add(0);
+                authMessage.add( (byte) 0 );
                 return "0";
             }
 
             if (avg <= PERIOD - DELTA/2.0) {
-                authMessage.add(1);
+                authMessage.add( (byte) 1 );
                 return "1";
             }
         }
 
         if (PERIOD - DELTA/2.0 < avg && avg < PERIOD + DELTA/2.0) {
             if (detecting) {
-                System.out.print("DETECTED MESSAGE: " + authMessage + " ");
+                // end of message detected
+                try {
+                    this.filewriterREL.append(authMessage.toString() + "\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                if (this.corrector == null) {
+                    System.out.println("DETECTED MESSAGE: " + authMessage + " ");
+                }
+                else if (this.corrector.checkCodeForAuthMessage(authMessage)) {
+                    List<Byte> mess = authMessage.subList(0, authMessage.size() - this.corrector.getNrCorrectingBits());
+                    System.out.println("DETECTED MESSAGE: " + mess + " ");
+                }
+                else {
+                    System.out.println("Error in transmission detected!");
+                }
             }
             authMessage = new LinkedList<>();
             detecting = !detecting;
@@ -104,9 +127,14 @@ public class IAT_Monitor implements CANMessageListener {
         return "No bit detected";
     }
 
+    public void setCorrector(ErrorCorrectionCode corrector) {
+        this.corrector = corrector;
+    }
+
     public void leave() {
         try {
-            this.filewriter.close();
+            this.filewriterIAT.close();
+            this.filewriterREL.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
