@@ -1,5 +1,6 @@
 package IAT_channel;
 
+import attestation.AttestationProtocol;
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.USBtin;
 import de.fischl.usbtin.USBtinException;
@@ -21,6 +22,7 @@ public class IATThread extends Thread {
     private IAT_Node sender;
     private IAT_Monitor monitor;
     private ErrorCorrectionCode corrector;
+    private AttestationProtocol protocol;
 
     public IATThread(long period, long delta, int window_length, int watchid, String sender, String receiver, int channel,
                      CANMessage mess, long nperiod) {
@@ -40,6 +42,8 @@ public class IATThread extends Thread {
         this.corrector = corrector;
     }
 
+    public void addAttestationProtocol(AttestationProtocol prot) { this.protocol = prot; }
+
     public void run() {
         try {
             // create the instances
@@ -55,6 +59,12 @@ public class IATThread extends Thread {
             if (this.corrector != null) {
                 this.sender.setCorrector(this.corrector);
                 this.monitor.setCorrector(this.corrector);
+            }
+
+            // add attestation protocol
+            if (this.protocol != null) {
+                this.sender.setProtocol(this.protocol);
+                this.monitor.setProtocol(this.protocol);
             }
 
             // connect to USBtin and open CAN channel in Active-Mode

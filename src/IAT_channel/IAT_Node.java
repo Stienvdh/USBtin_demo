@@ -1,5 +1,6 @@
 package IAT_channel;
 
+import attestation.AttestationProtocol;
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.USBtin;
 import de.fischl.usbtin.USBtinException;
@@ -17,6 +18,7 @@ public class IAT_Node extends USBtin {
     private int indexInAuthMessage = 0;
     private boolean running=true;
     private ErrorCorrectionCode corrector;
+    private AttestationProtocol protocol;
 
     public IAT_Node(long period, long delta, int windowLength) {
         PERIOD = period;
@@ -25,7 +27,10 @@ public class IAT_Node extends USBtin {
     }
 
     public void start(CANMessage message) {
-        this.AUTH_MESSAGE = new CANAuthMessage(AUTH);
+        if (this.protocol != null) {
+            this.AUTH_MESSAGE = this.protocol.getAttestationMessage(this);
+        }
+        else { return; }
 
         // error correction
         if (this.corrector != null) {
@@ -83,5 +88,9 @@ public class IAT_Node extends USBtin {
 
     public void setCorrector(ErrorCorrectionCode corrector) {
         this.corrector = corrector;
+    }
+
+    public void setProtocol(AttestationProtocol prot) {
+        this.protocol = prot;
     }
 }

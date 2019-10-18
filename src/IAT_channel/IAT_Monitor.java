@@ -1,5 +1,6 @@
 package IAT_channel;
 
+import attestation.AttestationProtocol;
 import de.fischl.usbtin.CANMessage;
 import de.fischl.usbtin.CANMessageListener;
 import error_correction.ErrorCorrectionCode;
@@ -26,6 +27,7 @@ public class IAT_Monitor implements CANMessageListener {
     private FileWriter filewriterIAT;
     private FileWriter filewriterREL;
     private ErrorCorrectionCode corrector;
+    private AttestationProtocol protocol;
 
     public IAT_Monitor(long period, long delta, int windowLength, int watchid, int channel, long nperiod) {
         this.PERIOD = period;
@@ -101,7 +103,7 @@ public class IAT_Monitor implements CANMessageListener {
 
         if (PERIOD - DELTA/2.0 < avg && avg < PERIOD + DELTA/2.0) {
             if (detecting) {
-                // end of message detected
+                // end of message detected, check error detection
                 try {
                     this.filewriterREL.append(authMessage.toString() + "\n");
                 } catch (IOException e) {
@@ -109,15 +111,17 @@ public class IAT_Monitor implements CANMessageListener {
                 }
 
                 if (this.corrector == null) {
-                    System.out.println("DETECTED MESSAGE: " + authMessage + " ");
+                    System.out.println("DETECTED MESSAGE: " + authMessage);
                 }
                 else if (this.corrector.checkCodeForAuthMessage(authMessage)) {
                     List<Byte> mess = authMessage.subList(0, authMessage.size() - this.corrector.getNrCorrectingBits());
-                    System.out.println("DETECTED MESSAGE: " + mess + " ");
+                    System.out.println("DETECTED MESSAGE: " + mess);
                 }
                 else {
                     System.out.println("Error in transmission detected!");
                 }
+
+
             }
             authMessage = new LinkedList<>();
             detecting = !detecting;
@@ -129,6 +133,10 @@ public class IAT_Monitor implements CANMessageListener {
 
     public void setCorrector(ErrorCorrectionCode corrector) {
         this.corrector = corrector;
+    }
+
+    public void setProtocol(AttestationProtocol prot) {
+        this.protocol = prot;
     }
 
     public void leave() {
