@@ -1,110 +1,40 @@
-/*
- * Demo application using USBtinLib, the Java Library for USBtin
- * http://www.fischl.de/usbtin
- *
- * Copyright (C) 2014  Thomas Fischl 
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-package USBtinLibDemo;
-
+import IAT_channel.IATThread;
 import de.fischl.usbtin.*;
+import noise.NoiseThread;
 
-/**
- * Demo application using USBtinLib, the Java Library for USBtin.
- * 
- * @author Thomas Fischl
- */
-public class USBtinLibDemo implements CANMessageListener {
+import java.io.IOException;
 
-    /** CAN message identifier we look for */
-    static final int WATCHID = 0x002;
-    
-    /**
-     * This method is called every time a CAN message is received.
-     * 
-     * @param canmsg Received CAN message
-     */
-    @Override
-    public void receiveCANMessage(CANMessage canmsg) {
+public class USBtinLibDemo {
 
-        // In this example we look for CAN messages with given ID
-        if (canmsg.getId() == WATCHID) {
-            
-            // juhuu.. match!
-            
-            // print out message infos
-            System.out.println("Watched message: " + canmsg);
-            System.out.println(
-                    "  id:" + canmsg.getId()
-                    + " dlc:" + canmsg.getData().length
-                    + " ext:" + canmsg.isExtended()
-                    + " rtr:" + canmsg.isRtr());
-            
-            // and now print payload
-            for (byte b : canmsg.getData()) {
-                System.out.print(" " + b);
-            }
-            System.out.println();
-            
-        } else {
-            // no match, just print the message string
-            System.out.println(canmsg);
-        }
-    }
+    private static final long PERIOD = 20;
+    private static final long NOISE_PERIOD = 10; // NOISE_PERIOD=0 --> no noise
+    private static final long DELTA = 10;
+    private static final int WINDOW_LENGTH = 4;
+    private static final int CHANNEL = 50000;
 
-    /**
-     * Entry method for our demo programm
-     * 
-     * @param args Arguments
-     */
+    private static final String SENDER_PORT = "/dev/tty.usbmodemA02183211";
+    private static final String RECEIVER_PORT = "/dev/tty.usbmodemA02102821";
+    private static final String NOISE_PORT = "/dev/tty.usbmodemA021CFBA1";
+    private static final int WATCHID = 0x100;
+
     public static void main(String[] args) {
-        
+        // Run a IAT thread
+        IATThread IAT = new IATThread(PERIOD, DELTA, WINDOW_LENGTH, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
+            new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}), NOISE_PERIOD);
+        IAT.start();
+
+        // Run a noise thread
+        NoiseThread noise = new NoiseThread(NOISE_PERIOD, CHANNEL, NOISE_PORT,
+                new CANMessage(0x200, new byte[]{0x11, 0x22, 0x33}));
+        noise.start();
+
+        // End the program
         try {
-
-            // create the instances
-            USBtin usbtin = new USBtin();
-            USBtinLibDemo libDemo = new USBtinLibDemo();
-
-            // connect to USBtin and open CAN channel with 10kBaud in Active-Mode
-            usbtin.connect("/dev/ttyACM1"); // Windows e.g. "COM3"
-            usbtin.addMessageListener(libDemo);
-            
-            usbtin.openCANChannel(10000, USBtin.OpenMode.ACTIVE);
-
-            // send an example CAN message (standard)
-            usbtin.send(new CANMessage(0x100, new byte[]{0x11, 0x22, 0x33}));
-            // send an example CAN message (extended)
-            usbtin.send(new CANMessage(0x101, new byte[]{0x44}, true, false));
-
-            // now wait for user input
-            System.out.println("Listen for CAN messages (watch id=" + WATCHID + ") ... press ENTER to exit!");
             System.in.read();
-
-            // close the CAN channel and close the connection
-            usbtin.closeCANChannel();
-            usbtin.disconnect();
-
-        } catch (USBtinException ex) {
-            
-            // Ohh.. something goes wrong while accessing/talking to USBtin           
-            System.err.println(ex);            
-            
-        } catch (java.io.IOException ex) {
-            
-            // this we need because of the System.in.read()
-            System.err.println(ex);
+            IAT.end();
+            noise.end();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
