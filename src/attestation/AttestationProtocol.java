@@ -1,7 +1,7 @@
 package attestation;
 
-import IAT_channel.CANAuthMessage;
-import de.fischl.usbtin.USBtin;
+import util.CANAuthMessage;
+import USBtin.USBtin;
 
 public interface AttestationProtocol {
     CANAuthMessage getAttestationMessage(USBtin node);

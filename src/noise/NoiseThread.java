@@ -1,8 +1,8 @@
 package noise;
 
-import de.fischl.usbtin.CANMessage;
-import de.fischl.usbtin.USBtin;
-import de.fischl.usbtin.USBtinException;
+import USBtin.CANMessage;
+import USBtin.USBtin;
+import USBtin.USBtinException;
 
 public class NoiseThread extends Thread {
 

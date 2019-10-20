@@ -2,7 +2,7 @@ USBtinLib
 =========
 
 USBtinLibDemo is an example Java minimal application which shows how to use
-USBtinLib, the Java Library for USBtin. USBtin is an USB to CAN interace
+USBtinLib, the Java Library for USBtin.USBtin. USBtin.USBtin is an USB to CAN interace
 (http://www.fischl.de/usbtin/).
 
 Build and run
