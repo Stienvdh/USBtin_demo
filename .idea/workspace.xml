@@ -2,44 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8055e118-9048-49a7-a4f5-66851d599956" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/USBtin/CANMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/USBtin/CANMessageListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/USBtin/FilterChain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/USBtin/FilterMask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/USBtin/FilterValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/USBtin/USBtin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/USBtin/USBtinException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/BasicListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/CANAuthMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IATThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IAT_Monitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/IAT_channel/IAT_Node.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/attestation/AttestationProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/attestation/AttestationProtocol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/attestation/HardCodedAttestation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/attestation/HardCodedAttestation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/error_correction/ErrorCorrectionCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/error_correction/SimpleCRC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/error_correction/SimpleParity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/noise/NoiseThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/noise/NoiseThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/noise/Noise_node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/noise/Noise_node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IAT_channel/CANAuthMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CANAuthMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IAT_channel/IATThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/DLC_channel/DLC_Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/DLC_channel/DLC_Monitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/DLC_channel/DLC_Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/DLC_channel/DLC_Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/USBtinLibDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USBtinLibDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attestation/AttestationProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/attestation/AttestationProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error_correction/ErrorCorrectionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/error_detection/ErrorCorrectionCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error_correction/SimpleCRC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/error_detection/SimpleCRC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error_correction/SimpleParity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/error_detection/SimpleParity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/noise/NoiseThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/noise/NoiseThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/noise/Noise_node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/noise/Noise_node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,24 +64,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="23" />
-          <entry key="java" value="55" />
+          <entry key="java" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="55" />
+          <entry key="JAVA" value="58" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="11183" />
+          <entry key="java" value="11588" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11183" />
+          <entry key="JAVA" value="11588" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -123,10 +93,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
+        <entry file="file://$PROJECT_DIR$/src/noise/Noise_node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="81" column="9" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="81" selection-end-column="9" />
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="370">
+              <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+            <state relative-caret-position="210">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,17 +143,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state relative-caret-position="795">
+              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding>
                 <element signature="e#513#514#0" expanded="true" />
                 <element signature="e#547#548#0" expanded="true" />
                 <element signature="e#686#687#0" expanded="true" />
                 <element signature="e#736#737#0" expanded="true" />
-                <element signature="e#2096#2097#0" expanded="true" />
-                <element signature="e#2137#2138#0" expanded="true" />
-                <element signature="e#2242#2243#0" expanded="true" />
-                <element signature="e#2282#2283#0" expanded="true" />
+                <element signature="e#4026#4027#0" expanded="true" />
+                <element signature="e#4068#4069#0" expanded="true" />
+                <element signature="e#4132#4133#0" expanded="true" />
+                <element signature="e#4172#4173#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,11 +168,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="93" column="26" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+            <state relative-caret-position="385">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="e#2365#2366#0" expanded="true" />
                 <element signature="e#2407#2408#0" expanded="true" />
@@ -214,10 +184,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java">
+        <entry file="file://$PROJECT_DIR$/src/USBtin/USBtin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+            <state relative-caret-position="193">
+              <caret line="407" selection-start-line="407" selection-end-line="407" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/noise/NoiseThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -226,10 +205,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/attestation/HardCodedAttestation.java">
+        <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="400">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,6 +225,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>detected</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -274,6 +261,9 @@
         <option value="$PROJECT_DIR$/src/DLC_channel/DLC_Node.java" />
         <option value="$PROJECT_DIR$/src/DLC_channel/DLC_Monitor.java" />
         <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" />
       </list>
     </option>
   </component>
@@ -302,6 +292,19 @@
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
               <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="transmission_channel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="transmission_channel" type="462c0819:PsiDirectoryNode" />
+              <item name="DLC_channel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -317,7 +320,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571573607087" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571575880806" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -391,8 +394,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2825465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2825465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -401,7 +405,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.3297568" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24096386" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24096386" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -587,23 +591,6 @@
     <entry file="file://$PROJECT_DIR$/src/USBtin/USBtinException.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/USBtin.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/noise/Noise_node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/noise/NoiseThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/attestation/AttestationProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -638,40 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/BasicListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="93" column="26" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
-          <folding>
-            <element signature="e#2365#2366#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2595#2596#0" expanded="true" />
-            <element signature="e#2637#2638#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -688,39 +645,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java">
+    <entry file="file://$PROJECT_DIR$/src/util/BasicListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="90" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#4026#4027#0" expanded="true" />
+            <element signature="e#4068#4069#0" expanded="true" />
+            <element signature="e#4132#4133#0" expanded="true" />
+            <element signature="e#4172#4173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/USBtin/USBtin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="407" selection-start-line="407" selection-end-line="407" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/noise/Noise_node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
+    <entry file="file://$PROJECT_DIR$/src/noise/NoiseThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="317">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#2096#2097#0" expanded="true" />
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2242#2243#0" expanded="true" />
-            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="370">
+          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <element signature="e#2365#2366#0" expanded="true" />
+            <element signature="e#2407#2408#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2637#2638#0" expanded="true" />
           </folding>
         </state>
       </provider>

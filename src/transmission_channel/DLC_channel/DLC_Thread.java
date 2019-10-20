@@ -16,6 +16,7 @@ public class DLC_Thread extends TransmissionThread {
     private DLC_Monitor monitor;
     private USBtin receiver;
     private CANMessage message;
+    private boolean running = true;
 
     public DLC_Thread(long period, int watchid, String sender, String receiver, int channel, CANMessage mess) {
         this.PERIOD = period;
@@ -65,10 +66,8 @@ public class DLC_Thread extends TransmissionThread {
 
     public void end() {
         try {
-            sender.closeCANChannel();
+            sender.leave();
             receiver.closeCANChannel();
-
-            sender.disconnect();
             receiver.disconnect();
         } catch (USBtinException ex) {
             ex.printStackTrace();

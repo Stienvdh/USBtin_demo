@@ -23,79 +23,77 @@ public class DLC_Monitor implements CANMessageListener {
 
     @Override
     public void receiveCANMessage(CANMessage message) {
-        String result = detectBit(message);
+        detectBit(message);
     }
 
-    private String detectBit(CANMessage message) {
-        int DLC = message.getDLC();
+    private void detectBit(CANMessage message) {
+        if (message.getId() == this.WATCHID) {
 
-        if (detecting) {
-            if (DLC > 8) {
-                switch (DLC) {
-                    case (DLC_Node.DLC_0):
-                        authMessage.add( (byte) 0);
-                        return "0";
-                    case (DLC_Node.DLC_1):
-                        authMessage.add( (byte) 1);
-                        return "1";
-                    case (DLC_Node.DLC_00):
-                        authMessage.add( (byte) 0);
-                        authMessage.add( (byte) 0);
-                        return "00";
-                    case (DLC_Node.DLC_01):
-                        authMessage.add( (byte) 0);
-                        authMessage.add( (byte) 1);
-                        return "01";
-                    case (DLC_Node.DLC_10):
-                        authMessage.add( (byte) 1);
-                        authMessage.add( (byte) 0);
-                        return "10";
-                    case (DLC_Node.DLC_11):
-                        authMessage.add( (byte) 1);
-                        authMessage.add( (byte) 1);
-                        return "11";
-                }
-            }
-        }
+            int DLC = message.getDLC();
 
-        if (DLC == DLC_Node.SILENCE_BIT_DLC) {
             if (detecting) {
-                // check error detection
-                if (this.corrector == null) {
-                    System.out.println("DETECTED MESSAGE: " + authMessage);
-                }
-                else if (this.corrector.checkCodeForAuthMessage(authMessage)) {
-                    if (authMessage.size() - this.corrector.getNrCorrectingBits() < 0) {
-                        System.out.println("Error in transmission detected!");
+                if (DLC > 8) {
+                    switch (DLC) {
+                        case (DLC_Node.DLC_0):
+                            authMessage.add((byte) 0);
+                            return;
+                        case (DLC_Node.DLC_1):
+                            authMessage.add((byte) 1);
+                            return;
+                        case (DLC_Node.DLC_00):
+                            authMessage.add((byte) 0);
+                            authMessage.add((byte) 0);
+                            return;
+                        case (DLC_Node.DLC_01):
+                            authMessage.add((byte) 0);
+                            authMessage.add((byte) 1);
+                            return;
+                        case (DLC_Node.DLC_10):
+                            authMessage.add((byte) 1);
+                            authMessage.add((byte) 0);
+                            return;
+                        case (DLC_Node.DLC_11):
+                            authMessage.add((byte) 1);
+                            authMessage.add((byte) 1);
+                            return;
                     }
-                    else {
-                        List<Byte> mess = authMessage.subList(0, authMessage.size() - this.corrector.getNrCorrectingBits());
-                        System.out.println("DETECTED MESSAGE: " + mess);
-                    }
                 }
-                else {
-                    System.out.println("Error in transmission detected!");
-                }
-
-                // check attestation
-                int size = authMessage.size() - this.corrector.getNrCorrectingBits() > 0 ?
-                        authMessage.size() - this.corrector.getNrCorrectingBits() :
-                        0;
-                CANAuthMessage canAuthMessage = this.corrector==null ?
-                        new CANAuthMessage(authMessage) :
-                        new CANAuthMessage(authMessage.subList(0, size));
-
-                if (this.protocol.checkAttestationMessage(canAuthMessage)) {
-                    System.out.println("Attestation OK");
-                }
-                else { System.out.println("Attestation NOK"); }
             }
-            authMessage = new LinkedList<>();
-            detecting = !detecting;
-            return "Silence bit";
-        }
 
-        return "No bit detected";
+            if (DLC == DLC_Node.SILENCE_BIT_DLC) {
+                if (detecting) {
+                    // check error detection
+                    if (this.corrector == null) {
+                        System.out.println("DETECTED MESSAGE: " + authMessage);
+                    } else if (this.corrector.checkCodeForAuthMessage(authMessage)) {
+                        if (authMessage.size() - this.corrector.getNrCorrectingBits() < 0) {
+                            System.out.println("Error in transmission detected! (too little bits)");
+                        } else {
+                            List<Byte> mess = authMessage.subList(0, authMessage.size() - this.corrector.getNrCorrectingBits());
+                            System.out.println("DETECTED MESSAGE: " + mess);
+                        }
+                    } else {
+                        System.out.println("Error in transmission detected! (wrong bits): " + authMessage);
+                    }
+
+                    // check attestation
+                    int size = authMessage.size() - this.corrector.getNrCorrectingBits() > 0 ?
+                            authMessage.size() - this.corrector.getNrCorrectingBits() :
+                            0;
+                    CANAuthMessage canAuthMessage = this.corrector == null ?
+                            new CANAuthMessage(authMessage) :
+                            new CANAuthMessage(authMessage.subList(0, size));
+
+                    if (this.protocol.checkAttestationMessage(canAuthMessage)) {
+                        System.out.println("Attestation OK");
+                    } else {
+                        System.out.println("Attestation NOK");
+                    }
+                }
+                authMessage = new LinkedList<>();
+                detecting = !detecting;
+            }
+        }
     }
 
     public void setCorrector(ErrorCorrectionCode corrector) {

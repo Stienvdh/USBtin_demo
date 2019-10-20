@@ -1,3 +1,4 @@
+import transmission_channel.DLC_channel.DLC_Thread;
 import transmission_channel.IAT_channel.IAT_Thread;
 import attestation.AttestationProtocol;
 import attestation.HardCodedAttestation;
@@ -27,10 +28,10 @@ public class USBtinLibDemo {
     private static AttestationProtocol AUTH_PROTOCOL =
             new HardCodedAttestation(new byte[]{1,1,0,0,1}); // Set attestation protocol here
     private static TransmissionThread TRANSMISSION_CHANNEL = // Set transmission channel here
-             new IAT_Thread(PERIOD, DELTA, WINDOW_LENGTH, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
-                    new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}), NOISE_PERIOD);
-             //new DLC_Thread(PERIOD, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
-                    //new CANMessage("t123811223344"));
+             //new IAT_Thread(PERIOD, DELTA, WINDOW_LENGTH, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
+             //       new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}), NOISE_PERIOD);
+             new DLC_Thread(PERIOD, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
+                    new CANMessage("t100811223344"));
 
     public static void main(String[] args) {
         // Run the transmission thread

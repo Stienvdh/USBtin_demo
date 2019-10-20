@@ -24,6 +24,7 @@ public class DLC_Node extends USBtin {
     private CANAuthMessage AUTH_MESSAGE;
     private ErrorCorrectionCode corrector;
     private AttestationProtocol protocol;
+    private boolean running = true;
 
     private int indexInAuthMessage = 0;
 
@@ -42,7 +43,7 @@ public class DLC_Node extends USBtin {
             this.AUTH_MESSAGE.setCorrectionCode(this.corrector);
         }
 
-        while (true) {
+        while (running) {
             try {
                 Thread.sleep(PERIOD);
                 message.setDLC(getDLCToUse(message));
@@ -105,5 +106,16 @@ public class DLC_Node extends USBtin {
 
     public void setAttestation(AttestationProtocol protocol) {
         this.protocol = protocol;
+    }
+
+    public void leave() {
+        try {
+            this.running = false;
+
+            this.closeCANChannel();
+            this.disconnect();
+        } catch (USBtinException ex) {
+            ex.printStackTrace();
+        }
     }
 }
