@@ -14,7 +14,6 @@ public class IAT_Node extends USBtin {
     private long DELTA;
     private int WINDOW_LENGTH;
     private CANAuthMessage AUTH_MESSAGE;
-    private byte[] AUTH = new byte[]{0,1,0,1};
 
     private int placeInWindow = 0;
     private int indexInAuthMessage = 0;

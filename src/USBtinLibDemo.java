@@ -3,6 +3,7 @@ import attestation.AttestationProtocol;
 import attestation.HardCodedAttestation;
 import de.fischl.usbtin.*;
 import error_correction.ErrorCorrectionCode;
+import error_correction.SimpleCRC;
 import error_correction.SimpleParity;
 import noise.NoiseThread;
 
@@ -20,7 +21,7 @@ public class USBtinLibDemo {
     private static final String RECEIVER_PORT = "/dev/tty.usbmodemA02102821";
     private static final String NOISE_PORT = "/dev/tty.usbmodemA021CFBA1";
     private static final int WATCHID = 0x100;
-    private static ErrorCorrectionCode AUTH_CORRECTOR = new SimpleParity(); // Set error correction instance here
+    private static ErrorCorrectionCode AUTH_CORRECTOR = new SimpleCRC(2, "101"); // Set error correction instance here
     private static AttestationProtocol AUTH_PROTOCOL =
             new HardCodedAttestation(new byte[]{1,1,0,0,1}); // Set attestation protocol here
 
