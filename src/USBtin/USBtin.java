@@ -298,6 +298,7 @@ public class USBtin implements SerialPortEventListener {
      */
     @Override
     public void serialEvent(SerialPortEvent event) {
+        // check if bytes available (RX = bytes in input buffer)
         if (event.isRXCHAR() && event.getEventValue() > 0) {
             try {
                 byte buffer[] = serialPort.readBytes();

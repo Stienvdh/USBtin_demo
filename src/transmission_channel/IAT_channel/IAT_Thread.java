@@ -24,9 +24,11 @@ public class IAT_Thread extends TransmissionThread {
     private IAT_Monitor monitor;
     private ErrorCorrectionCode corrector;
     private AttestationProtocol protocol;
+    private int silence_start;
+    private int silence_end;
 
     public IAT_Thread(long period, long delta, int window_length, int watchid, String sender, String receiver, int channel,
-                      CANMessage mess, long nperiod) {
+                      CANMessage mess, long nperiod, int silence_start, int silence_end) {
         this.PERIOD = period;
         this.DELTA = delta;
         this.WINDOW_LENGTH = window_length;
@@ -37,6 +39,8 @@ public class IAT_Thread extends TransmissionThread {
         this.RECEIVER_PORT = receiver;
         this.CHANNEL = channel;
         this.message = mess;
+        this.silence_start = silence_start;
+        this.silence_end = silence_end;
     }
 
     public void addAuthCorrectionCode(ErrorCorrectionCode corrector) {
@@ -48,9 +52,10 @@ public class IAT_Thread extends TransmissionThread {
     public void run() {
         try {
             // create the instances
-            IAT_Node sender = new IAT_Node(PERIOD, DELTA, WINDOW_LENGTH);
+            IAT_Node sender = new IAT_Node(PERIOD, DELTA, WINDOW_LENGTH, silence_start, silence_end);
             USBtin listener = new USBtin();
-            IAT_Monitor monitor = new IAT_Monitor(PERIOD, DELTA, WINDOW_LENGTH, WATCH_ID, CHANNEL, NOISE_PERIOD);
+            IAT_Monitor monitor = new IAT_Monitor(PERIOD, DELTA, WINDOW_LENGTH, WATCH_ID, CHANNEL, NOISE_PERIOD,
+                silence_start, silence_end);
 
             this.sender = sender;
             this.receiver = listener;

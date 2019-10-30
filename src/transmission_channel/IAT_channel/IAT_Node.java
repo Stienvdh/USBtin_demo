@@ -5,6 +5,9 @@ import USBtin.CANMessage;
 import USBtin.USBtin;
 import USBtin.USBtinException;
 import error_detection.ErrorCorrectionCode;
+import jssc.SerialPortEventListener;
+import jssc.SerialPortException;
+import jssc.SerialPortTimeoutException;
 import util.CANAuthMessage;
 
 import java.util.List;
@@ -21,11 +24,21 @@ public class IAT_Node extends USBtin {
     private boolean running=true;
     private ErrorCorrectionCode corrector;
     private AttestationProtocol protocol;
+    private int silence_start;
+    private int silence_end;
 
-    public IAT_Node(long period, long delta, int windowLength) {
+    // for silence start/end
+    private int silence_counter = 0;
+    private boolean starting = false;
+    private boolean stopping = false;
+
+    public IAT_Node(long period, long delta, int windowLength, int silence_start, int silence_end) {
         PERIOD = period;
         DELTA = delta;
         WINDOW_LENGTH = windowLength;
+
+        this.silence_start = silence_start * WINDOW_LENGTH;
+        this.silence_end = silence_end * WINDOW_LENGTH;
     }
 
     public void start(CANMessage message) {
@@ -41,7 +54,8 @@ public class IAT_Node extends USBtin {
 
         while (running) {
             try {
-                Thread.sleep(this.getTimeToSleep());
+                long timeToSleep = this.getTimeToSleep();
+                Thread.sleep(timeToSleep);
                 this.send(message);
             }
             catch (InterruptedException | USBtinException ex) {
@@ -53,22 +67,60 @@ public class IAT_Node extends USBtin {
     public long getTimeToSleep() {
         List<Byte> auth_bytes = this.AUTH_MESSAGE.toByteArray();
 
+        // start silence bits
+        if (indexInAuthMessage == 0) {
+            if (!starting) {
+                silence_counter++;
+                starting = true;
+                placeInWindow = WINDOW_LENGTH;
+                return PERIOD;
+            }
+            if (silence_counter < silence_start) {
+                starting = true;
+                silence_counter++;
+                return PERIOD;
+            }
+        }
+        starting = false;
+
+        // stop silence bits
+        if (indexInAuthMessage == auth_bytes.size()) {
+            if (stopping) {
+                if (silence_counter < silence_end) {
+                    silence_counter++;
+                    return PERIOD;
+                }
+                else {
+                    placeInWindow = WINDOW_LENGTH;
+                    silence_counter = 0;
+                }
+            }
+        }
+
         // wrap-arounds
         if (placeInWindow >= WINDOW_LENGTH) {
-            indexInAuthMessage += 1;
+            if (indexInAuthMessage == auth_bytes.size()) {
+                if (!stopping) {
+                    stopping = true;
+                    silence_counter = 1;
+                    return PERIOD;
+                }
+                else {
+                    stopping = false;
+                    silence_counter = 0;
+                }
+            }
+            if (!starting) { indexInAuthMessage += 1; }
             placeInWindow = 0;
         }
 
-        if (indexInAuthMessage > auth_bytes.size()+1) {
+        if (indexInAuthMessage > auth_bytes.size()) {
             indexInAuthMessage = 0;
+            silence_counter = 1;
+            return PERIOD;
         }
 
         placeInWindow += 1;
-
-        // silence bits
-        if (indexInAuthMessage == 0 || indexInAuthMessage == auth_bytes.size()+1) {
-            return PERIOD;
-        }
 
         if (auth_bytes.get(indexInAuthMessage-1).equals( (byte) 0)) {
             return PERIOD + DELTA;

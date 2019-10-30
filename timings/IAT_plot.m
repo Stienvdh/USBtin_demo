@@ -1,4 +1,3 @@
-
 %% INIT
 max_entries = 755;
 
