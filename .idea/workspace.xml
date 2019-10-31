@@ -3,28 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8055e118-9048-49a7-a4f5-66851d599956" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtin/USBtin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtin/USBtin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Monitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Thread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P1000_D10_C50000_N0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P15_D10_C50000_N1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P15_D10_C50000_N10.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C50000_N0.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C50000_N1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C50000_N100.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P20_D10_C50000_N10.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P20_D10_C50000_N200.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reliability/reliability_plot.m" beforeDir="false" afterPath="$PROJECT_DIR$/reliability/reliability_plot.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/USBtin/USBtin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USBtin/USBtin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/USBtinLibDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USBtinLibDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D10_C50000_N100.csv" beforeDir="false" afterPath="$PROJECT_DIR$/timings/IAT_P200_D10_C50000_N100.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C50000_N200.csv" beforeDir="false" afterPath="$PROJECT_DIR$/timings/IAT_P200_D20_C50000_N200.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timings/IAT_plot.m" beforeDir="false" afterPath="$PROJECT_DIR$/timings/IAT_plot.m" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,12 +53,12 @@
     <session id="-1829492025">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.3" value="5" />
-          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -94,12 +78,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="14628" />
+          <entry key="java" value="14829" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14628" />
+          <entry key="JAVA" value="14829" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -113,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            <state relative-caret-position="168">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,20 +109,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+            <state relative-caret-position="135">
+              <caret line="95" column="53" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6638#6639#0" expanded="true" />
-                <element signature="e#6680#6681#0" expanded="true" />
-                <element signature="e#6737#6738#0" expanded="true" />
-                <element signature="e#6773#6774#0" expanded="true" />
+                <element signature="e#6605#6606#0" expanded="true" />
+                <element signature="e#6647#6648#0" expanded="true" />
+                <element signature="e#6704#6705#0" expanded="true" />
+                <element signature="e#6740#6741#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/attestation/HardCodedAttestation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -154,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
+            <state relative-caret-position="735">
               <caret line="56" column="112" selection-start-line="56" selection-start-column="112" selection-end-line="56" selection-end-column="112" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -163,17 +147,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="86" column="51" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
+            <state relative-caret-position="274">
+              <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4217#4218#0" expanded="true" />
-                <element signature="e#4259#4260#0" expanded="true" />
-                <element signature="e#4316#4317#0" expanded="true" />
-                <element signature="e#4352#4353#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,10 +220,10 @@
         <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" />
         <option value="$PROJECT_DIR$/src/USBtin/USBtin.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" />
-        <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" />
         <option value="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" />
+        <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" />
       </list>
     </option>
   </component>
@@ -321,7 +301,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572471146120" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572511890994" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -397,7 +377,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23104435" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23390558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -697,48 +677,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
+        <state relative-caret-position="735">
           <caret line="56" column="112" selection-start-line="56" selection-start-column="112" selection-end-line="56" selection-end-column="112" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="86" column="51" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4217#4218#0" expanded="true" />
-            <element signature="e#4259#4260#0" expanded="true" />
-            <element signature="e#4316#4317#0" expanded="true" />
-            <element signature="e#4352#4353#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6638#6639#0" expanded="true" />
-            <element signature="e#6680#6681#0" expanded="true" />
-            <element signature="e#6737#6738#0" expanded="true" />
-            <element signature="e#6773#6774#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -750,6 +692,40 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#695#696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="95" column="53" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6605#6606#0" expanded="true" />
+            <element signature="e#6647#6648#0" expanded="true" />
+            <element signature="e#6704#6705#0" expanded="true" />
+            <element signature="e#6740#6741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -23,8 +23,8 @@ public class USBtinLibDemo {
     private static final String NOISE_PORT = "/dev/tty.usbmodemA021CFBA1";
     private static final int WATCHID = 0x100;
 
-    private static final int START_SILENCE = 2;
-    private static final int END_SILENCE = 2;
+    private static final int START_SILENCE = 1;
+    private static final int END_SILENCE = 1;
 
     private static ErrorCorrectionCode AUTH_CORRECTOR =
             new SimpleCRC(2, "101"); // Set error correction instance here

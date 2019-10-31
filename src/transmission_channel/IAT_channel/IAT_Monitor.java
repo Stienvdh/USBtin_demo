@@ -94,6 +94,7 @@ public class IAT_Monitor implements CANMessageListener {
     }
 
     private String detectBit(List<Long> fullWindow) {
+
         long sum = 0L;
         for (long v : fullWindow) {
             sum += v;
@@ -120,12 +121,17 @@ public class IAT_Monitor implements CANMessageListener {
                 authMessage.add( (byte) 1 );
                 return "1";
             }
+
+            // start of end silence
+            else {
+                silence_counter = 1;
+            }
         }
 
         if (PERIOD - DELTA/2.0 < avg && avg < PERIOD + DELTA/2.0) {
             silence_counter++;
 
-            if (silence_counter < silence_start) { return "Silence bit"; }
+            if ( (!detecting) && silence_counter < silence_start) { return "Silence bit"; }
 
             // detect start silence
             if (!detecting) {
@@ -134,7 +140,7 @@ public class IAT_Monitor implements CANMessageListener {
             }
 
             // detect end silence
-            if (detecting && silence_counter == silence_end) {
+            if (silence_counter >= silence_end) {
 
                 // end of message detected, check error detection
                 detecting = false;
@@ -162,7 +168,7 @@ public class IAT_Monitor implements CANMessageListener {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("Error in transmission detected!");
+                    System.out.println("Error in transmission detected! Received: " + authMessage);
                 }
 
                 // check attestation
