@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8055e118-9048-49a7-a4f5-66851d599956" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IATBitConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/TwoBitConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Monitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Thread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Thread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/USBtinLibDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USBtinLibDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,25 +69,25 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="csv" value="27" />
-          <entry key="java" value="68" />
+          <entry key="java" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="68" />
+          <entry key="JAVA" value="72" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="14829" />
+          <entry key="java" value="17300" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14829" />
+          <entry key="JAVA" value="17300" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -97,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+            <state relative-caret-position="278">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,14 +113,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="95" column="53" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
+            <state relative-caret-position="352">
+              <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6605#6606#0" expanded="true" />
-                <element signature="e#6647#6648#0" expanded="true" />
-                <element signature="e#6704#6705#0" expanded="true" />
-                <element signature="e#6740#6741#0" expanded="true" />
+                <element signature="e#6892#6893#0" expanded="true" />
+                <element signature="e#6934#6935#0" expanded="true" />
+                <element signature="e#6991#6992#0" expanded="true" />
+                <element signature="e#7027#7028#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="56" column="112" selection-start-line="56" selection-start-column="112" selection-end-line="56" selection-end-column="112" />
+            <state relative-caret-position="201">
+              <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,13 +151,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+            <state relative-caret-position="121">
+              <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4491#4492#0" expanded="true" />
+                <element signature="e#4533#4534#0" expanded="true" />
+                <element signature="e#4590#4591#0" expanded="true" />
+                <element signature="e#4626#4627#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IATBitConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+              <folding>
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#443#444#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/TwoBitConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#194#195#0" expanded="true" />
+                <element signature="e#214#215#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,6 +227,7 @@
       <find>filewriter</find>
       <find>system.out</find>
       <find>system</find>
+      <find>delta</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,11 +261,13 @@
         <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" />
         <option value="$PROJECT_DIR$/src/USBtin/USBtin.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" />
         <option value="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" />
         <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/TwoBitConverter.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IATBitConverter.java" />
       </list>
     </option>
   </component>
@@ -301,7 +345,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572511890994" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572535885655" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -661,30 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="56" column="112" selection-start-line="56" selection-start-column="112" selection-end-line="56" selection-end-column="112" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/attestation/HardCodedAttestation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -696,10 +716,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4491#4492#0" expanded="true" />
+            <element signature="e#4533#4534#0" expanded="true" />
+            <element signature="e#4590#4591#0" expanded="true" />
+            <element signature="e#4626#4627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/TwoBitConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        <state relative-caret-position="278">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -708,24 +778,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="95" column="53" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
+        <state relative-caret-position="352">
+          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6605#6606#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
-            <element signature="e#6704#6705#0" expanded="true" />
-            <element signature="e#6740#6741#0" expanded="true" />
+            <element signature="e#6892#6893#0" expanded="true" />
+            <element signature="e#6934#6935#0" expanded="true" />
+            <element signature="e#6991#6992#0" expanded="true" />
+            <element signature="e#7027#7028#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IATBitConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        <state relative-caret-position="255">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
           </folding>
         </state>
       </provider>

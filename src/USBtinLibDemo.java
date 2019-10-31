@@ -1,4 +1,5 @@
 import transmission_channel.DLC_channel.DLC_Thread;
+import transmission_channel.IAT_channel.IATBitConverter;
 import transmission_channel.IAT_channel.IAT_Thread;
 import attestation.AttestationProtocol;
 import attestation.HardCodedAttestation;
@@ -6,6 +7,7 @@ import USBtin.*;
 import error_detection.ErrorCorrectionCode;
 import error_detection.SimpleCRC;
 import noise.NoiseThread;
+import transmission_channel.IAT_channel.TwoBitConverter;
 import transmission_channel.TransmissionThread;
 
 import java.io.IOException;
@@ -25,6 +27,7 @@ public class USBtinLibDemo {
 
     private static final int START_SILENCE = 1;
     private static final int END_SILENCE = 1;
+    private static final IATBitConverter CONVERTER = new TwoBitConverter(PERIOD, DELTA, 2);
 
     private static ErrorCorrectionCode AUTH_CORRECTOR =
             new SimpleCRC(2, "101"); // Set error correction instance here
@@ -32,7 +35,8 @@ public class USBtinLibDemo {
             new HardCodedAttestation(new byte[]{1,1,0,0,1}); // Set attestation protocol here
     private static TransmissionThread TRANSMISSION_CHANNEL = // Set transmission channel here
              new IAT_Thread(PERIOD, DELTA, WINDOW_LENGTH, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
-                    new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}), NOISE_PERIOD, START_SILENCE, END_SILENCE);
+                    new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}), NOISE_PERIOD, START_SILENCE, END_SILENCE,
+                     CONVERTER);
              //new DLC_Thread(PERIOD, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
              //       new CANMessage("t100811223344"));
 

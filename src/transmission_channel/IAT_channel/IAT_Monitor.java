@@ -33,9 +33,10 @@ public class IAT_Monitor implements CANMessageListener {
     private int silence_start;
     private int silence_end;
     private int silence_counter;
+    private IATBitConverter converter;
 
     public IAT_Monitor(long period, long delta, int windowLength, int watchid, int channel, long nperiod,
-                       int silence_start, int silence_end) {
+                       int silence_start, int silence_end, IATBitConverter converter) {
         this.PERIOD = period;
         this.DELTA = delta;
         this.WINDOW_LENGTH = windowLength;
@@ -44,6 +45,7 @@ public class IAT_Monitor implements CANMessageListener {
         this.NOISE_PERIOD = nperiod;
         this.silence_start = silence_start;
         this.silence_end = silence_end;
+        this.converter = converter;
 
         // statistics
         try {
@@ -87,6 +89,7 @@ public class IAT_Monitor implements CANMessageListener {
             // sample running average
             window.add(IAT);
             if (window.size() == WINDOW_LENGTH) {
+                System.out.println(window);
                 detectBit(window);
                 window = new LinkedList<>();
             }
@@ -101,25 +104,18 @@ public class IAT_Monitor implements CANMessageListener {
         }
         long avg = sum / fullWindow.size();
 
+        int intervals = this.converter.getIntervals(avg);
+
         if (detecting) {
-            if (avg >= PERIOD + DELTA/2.0) {
+            if (intervals != 0) {
                 if (silence_counter > 0) {
                     silence_counter = 0;
                     this.authMessage = new LinkedList<>();
                 }
 
-                authMessage.add( (byte) 0 );
-                return "0";
-            }
-
-            if (avg <= PERIOD - DELTA/2.0) {
-                if (silence_counter > 0) {
-                    silence_counter = 0;
-                    this.authMessage = new LinkedList<>();
-                }
-
-                authMessage.add( (byte) 1 );
-                return "1";
+                System.out.println("detected: " + this.converter.convertFromIntervals(intervals) + " intervals: " + intervals);
+                this.authMessage.addAll(this.converter.convertFromIntervals(intervals));
+                return this.authMessage.toString();
             }
 
             // start of end silence
@@ -128,7 +124,7 @@ public class IAT_Monitor implements CANMessageListener {
             }
         }
 
-        if (PERIOD - DELTA/2.0 < avg && avg < PERIOD + DELTA/2.0) {
+        if (intervals == 0) {
             silence_counter++;
 
             if ( (!detecting) && silence_counter < silence_start) { return "Silence bit"; }

@@ -5,17 +5,14 @@ import USBtin.CANMessage;
 import USBtin.USBtin;
 import USBtin.USBtinException;
 import error_detection.ErrorCorrectionCode;
-import jssc.SerialPortEventListener;
-import jssc.SerialPortException;
-import jssc.SerialPortTimeoutException;
 import util.CANAuthMessage;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class IAT_Node extends USBtin {
 
     private long PERIOD;
-    private long DELTA;
     private int WINDOW_LENGTH;
     private CANAuthMessage AUTH_MESSAGE;
 
@@ -26,19 +23,20 @@ public class IAT_Node extends USBtin {
     private AttestationProtocol protocol;
     private int silence_start;
     private int silence_end;
+    private IATBitConverter converter;
 
     // for silence start/end
     private int silence_counter = 0;
     private boolean starting = false;
     private boolean stopping = false;
 
-    public IAT_Node(long period, long delta, int windowLength, int silence_start, int silence_end) {
+    public IAT_Node(long period, int windowLength, int silence_start, int silence_end, IATBitConverter converter) {
         PERIOD = period;
-        DELTA = delta;
         WINDOW_LENGTH = windowLength;
 
         this.silence_start = silence_start * WINDOW_LENGTH;
         this.silence_end = silence_end * WINDOW_LENGTH;
+        this.converter = converter;
     }
 
     public void start(CANMessage message) {
@@ -86,7 +84,7 @@ public class IAT_Node extends USBtin {
         starting = false;
 
         // stop silence bits
-        if (indexInAuthMessage == auth_bytes.size()) {
+        if (indexInAuthMessage >= auth_bytes.size()) {
             if (stopping) {
                 if (silence_counter < silence_end) {
                     silence_counter++;
@@ -101,7 +99,7 @@ public class IAT_Node extends USBtin {
 
         // wrap-arounds
         if (placeInWindow >= WINDOW_LENGTH) {
-            if (indexInAuthMessage == auth_bytes.size()) {
+            if (indexInAuthMessage >= auth_bytes.size()) {
                 if (!stopping) {
                     stopping = true;
                     silence_counter = 1;
@@ -112,7 +110,10 @@ public class IAT_Node extends USBtin {
                     silence_counter = 0;
                 }
             }
-            if (!starting) { indexInAuthMessage += 1; }
+            if (!starting) {
+                if (indexInAuthMessage == 0) { indexInAuthMessage = 1; }
+                else { indexInAuthMessage += this.converter.getBitsEncoded(); }
+            }
             placeInWindow = 0;
         }
 
@@ -124,11 +125,16 @@ public class IAT_Node extends USBtin {
 
         placeInWindow += 1;
 
-        if (auth_bytes.get(indexInAuthMessage-1).equals( (byte) 0)) {
-            return PERIOD + DELTA;
+        // bit encoding
+        List<Byte> restingBytes;
+        try {
+            restingBytes = auth_bytes.subList(indexInAuthMessage-1,
+                    indexInAuthMessage-1+this.converter.getBitsEncoded());
+        } catch (IndexOutOfBoundsException ex) {
+            restingBytes = auth_bytes.subList(indexInAuthMessage-1, auth_bytes.size());
         }
 
-        return PERIOD - DELTA;
+        return this.converter.convertToIAT(restingBytes);
     }
 
     public void leave() {
