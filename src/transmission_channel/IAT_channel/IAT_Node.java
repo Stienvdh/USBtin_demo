@@ -7,6 +7,9 @@ import USBtin.USBtinException;
 import error_detection.ErrorCorrectionCode;
 import util.CANAuthMessage;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,19 +27,27 @@ public class IAT_Node extends USBtin {
     private int silence_start;
     private int silence_end;
     private IATBitConverter converter;
+    private FileWriter ITTwriter;
+    private long delta;
+    private long channel;
+    private long nperiod;
 
     // for silence start/end
     private int silence_counter = 0;
     private boolean starting = false;
     private boolean stopping = false;
 
-    public IAT_Node(long period, int windowLength, int silence_start, int silence_end, IATBitConverter converter) {
+    public IAT_Node(long period, int windowLength, int silence_start, int silence_end, IATBitConverter converter,
+                    long delta, long channel, long nperiod) {
         PERIOD = period;
         WINDOW_LENGTH = windowLength;
 
         this.silence_start = silence_start * WINDOW_LENGTH;
         this.silence_end = silence_end * WINDOW_LENGTH;
         this.converter = converter;
+        this.delta = delta;
+        this.channel = channel;
+        this.nperiod = nperiod;
     }
 
     public void start(CANMessage message) {
@@ -50,9 +61,24 @@ public class IAT_Node extends USBtin {
             this.AUTH_MESSAGE.setCorrectionCode(this.corrector);
         }
 
+        // statistics
+        try {
+            new File("timings").mkdir();
+            this.ITTwriter = new FileWriter("timings/ITT_" + "P" + PERIOD + "_D" + delta + "_C" +
+                    channel + "_N" + nperiod + ".csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         while (running) {
             try {
                 long timeToSleep = this.getTimeToSleep();
+                // Save ITT
+                try {
+                    this.ITTwriter.append(timeToSleep + ";" + System.currentTimeMillis() + "\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 Thread.sleep(timeToSleep);
                 this.send(message);
             }
@@ -142,8 +168,9 @@ public class IAT_Node extends USBtin {
         try {
             this.closeCANChannel();
             this.disconnect();
+            this.ITTwriter.close();
         }
-        catch (USBtinException ex) {
+        catch (USBtinException | IOException ex) {
             ex.printStackTrace();
         }
     }

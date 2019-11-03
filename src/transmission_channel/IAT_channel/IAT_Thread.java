@@ -54,7 +54,8 @@ public class IAT_Thread extends TransmissionThread {
     public void run() {
         try {
             // create the instances
-            IAT_Node sender = new IAT_Node(PERIOD, WINDOW_LENGTH, silence_start, silence_end, converter);
+            IAT_Node sender = new IAT_Node(PERIOD, WINDOW_LENGTH, silence_start, silence_end, converter,
+                    DELTA, CHANNEL, NOISE_PERIOD);
             USBtin listener = new USBtin();
             IAT_Monitor monitor = new IAT_Monitor(PERIOD, DELTA, WINDOW_LENGTH, WATCH_ID, CHANNEL, NOISE_PERIOD,
                 silence_start, silence_end, converter);

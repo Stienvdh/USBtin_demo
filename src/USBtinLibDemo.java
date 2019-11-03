@@ -14,9 +14,9 @@ import java.io.IOException;
 
 public class USBtinLibDemo {
 
-    private static final long PERIOD = 100;
+    private static final long PERIOD = 200;
     private static final long NOISE_PERIOD = 0; // NOISE_PERIOD=0 --> no noise
-    private static final long DELTA = 10;
+    private static final long DELTA = 20;
     private static final int WINDOW_LENGTH = 4;
     private static final int CHANNEL = 10000;
 
@@ -25,8 +25,8 @@ public class USBtinLibDemo {
     private static final String NOISE_PORT = "/dev/tty.usbmodemA021CFBA1";
     private static final int WATCHID = 0x100;
 
-    private static final int START_SILENCE = 1;
-    private static final int END_SILENCE = 1;
+    private static final int START_SILENCE = 2;
+    private static final int END_SILENCE = 2;
     private static final IATBitConverter CONVERTER = new TwoBitConverter(PERIOD, DELTA, 2);
 
     private static ErrorCorrectionCode AUTH_CORRECTOR =

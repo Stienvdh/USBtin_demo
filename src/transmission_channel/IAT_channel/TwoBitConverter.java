@@ -5,12 +5,12 @@ import java.util.List;
 
 public class TwoBitConverter extends IATBitConverter {
 
-    private final int INT_0 = -3;
-    private final int INT_00 = -2;
-    private final int INT_01 = -1;
-    private final int INT_10 = 1;
-    private final int INT_11 = 2;
-    private final int INT_1 = 3;
+    private final int INT_0 = 3;
+    private final int INT_00 = 2;
+    private final int INT_01 = 1;
+    private final int INT_10 = -1;
+    private final int INT_11 = -2;
+    private final int INT_1 = -3;
 
     public TwoBitConverter(long period, long delta, int bits) {
         super(period, delta, bits);
