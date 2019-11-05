@@ -15,10 +15,12 @@ import java.io.IOException;
 public class USBtinLibDemo {
 
     private static final long PERIOD = 200;
-    private static final long NOISE_PERIOD = 0; // NOISE_PERIOD=0 --> no noise
-    private static final long DELTA = 20;
+    private static final long DELTA = 5;
     private static final int WINDOW_LENGTH = 4;
-    private static final int CHANNEL = 10000;
+    private static final int CHANNEL = 50000;
+    private static final double LOAD = 0.5;
+    //private static final long NOISE_PERIOD = (long) ((68.0/(CHANNEL/1000d))/LOAD) + 10  ; // NOISE_PERIOD=0 --> no noise
+    private static final long NOISE_PERIOD = 0;
 
     private static final String SENDER_PORT = "/dev/tty.usbmodemA02183211";
     private static final String RECEIVER_PORT = "/dev/tty.usbmodemA02102821";

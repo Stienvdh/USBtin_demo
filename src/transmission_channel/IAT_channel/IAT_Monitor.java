@@ -35,6 +35,7 @@ public class IAT_Monitor implements CANMessageListener {
     private int silence_counter;
     private IATBitConverter converter;
     private boolean stopping;
+    private boolean starting;
 
     public IAT_Monitor(long period, long delta, int windowLength, int watchid, int channel, long nperiod,
                        int silence_start, int silence_end, IATBitConverter converter) {
@@ -52,10 +53,10 @@ public class IAT_Monitor implements CANMessageListener {
         try {
             new File("timings").mkdir();
             new File("reliability").mkdir();
-            this.filewriterIAT = new FileWriter("timings/IAT_" + "P" + PERIOD + "_D" + DELTA + "_C" +
+            // this.filewriterIAT = new FileWriter("timings/IAT_" + "P" + PERIOD + "_D" + DELTA + "_C" +
+                    // CHANNEL + "_N" + NOISE_PERIOD + ".csv");
+            this.filewriterREL = new FileWriter("reliability/IATrel_" + "_D" + DELTA + "_C" +
                     CHANNEL + "_N" + NOISE_PERIOD + ".csv");
-            //this.filewriterREL = new FileWriter("reliability/IATrel_" + "P" + PERIOD + "_D" + DELTA + "_C" +
-            //        CHANNEL + "_N" + NOISE_PERIOD + ".csv");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -79,11 +80,11 @@ public class IAT_Monitor implements CANMessageListener {
             long IAT = currentTime - lastArrival;
 
             // Save IAT
-            try {
-                this.filewriterIAT.append(IAT + ";" + System.currentTimeMillis() + "\n");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                this.filewriterIAT.append(IAT + ";" + System.currentTimeMillis() + "\n");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
             lastArrival = currentTime;
 
@@ -106,81 +107,121 @@ public class IAT_Monitor implements CANMessageListener {
 
         int intervals = this.converter.getIntervals(avg);
 
-        if (detecting && intervals != 0) {
-            this.authMessage.addAll(this.converter.convertFromIntervals(intervals));
-            return this.authMessage.toString();
+        if (intervals != 0) {
+            if (starting) {
+                // Correct behaviour : after start silence
+                if (silence_counter >= silence_start) {
+                    detecting = true;
+                    starting = false;
+                    silence_counter = 0;
+                    this.authMessage.addAll(this.converter.convertFromIntervals(intervals));
+                    return authMessage.toString();
+                }
+                else {
+                    starting = false;
+                    silence_counter = 0;
+                    authMessage = new LinkedList<>();
+                    return "Garbage bit";
+                }
+            }
+
+            else if (stopping) {
+                stopping = false;
+                silence_counter = 0;
+                this.authMessage = new LinkedList<>();
+                return "Garbage bit";
+            }
+
+            // Correct behaviour : during detection
+            if (detecting) {
+                this.authMessage.addAll(this.converter.convertFromIntervals(intervals));
+                return this.authMessage.toString();
+            }
         }
 
-        if (intervals == 0) {
+        else {
             silence_counter++;
 
-            if ( (!detecting && !stopping) && silence_counter < silence_start) { return "Silence bit"; }
-
-            // detect start silence
-            if ( !detecting && !stopping ) {
-                detecting = true;
-                silence_counter = 0;
+            // Correct behaviour : start of start silence
+            if (!starting && !detecting && !stopping) {
+                starting = true;
+                silence_counter = 1;
                 authMessage = new LinkedList<>();
                 return "Silence bit";
             }
 
+            // Correct behaviour : start of end silence
             if (detecting) {
-                silence_counter = 1;
                 detecting = false;
                 stopping = true;
+                silence_counter = 1;
             }
 
-            // detect end silence
-            if (silence_counter >= silence_end) {
-                stopping = false;
+            if (stopping) {
+                // Correct behaviour : end of end silence -> end of message
+                if (silence_counter >= silence_end) {
+                    stopping = false;
+                    silence_counter = 0;
 
-                // end of message detected, check error detection
-                detecting = false;
-                silence_counter = 0;
-                if (this.corrector == null) {
-                    System.out.println("DETECTED MESSAGE: " + authMessage);
-                }
-                else if (this.corrector.checkCodeForAuthMessage(authMessage)) {
-                    // Save message receive
-//                    try {
-//                        this.filewriterREL.append("1\n");
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-                    if (authMessage.size() - this.corrector.getNrCorrectingBits() < 0) {
+                    int attSize = authMessage.size();
+
+                    // Check error detection
+                    if (this.corrector == null) {
                         System.out.println("DETECTED MESSAGE: " + authMessage);
                     }
-                    else {
+                    else if (this.corrector.checkCodeForAuthMessage(authMessage)) {
                         List<Byte> mess = authMessage.subList(0, authMessage.size() - this.corrector.getNrCorrectingBits());
+                        attSize = mess.size();
                         System.out.println("DETECTED MESSAGE: " + mess + " COUNTER: " + this.counter);
                     }
-                }
-                else {
-//                    try {
-//                        this.filewriterREL.append("0\n");
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-                    System.out.println("Error in transmission detected! Received: " + authMessage + " COUNTER: " +
-                            this.silence_counter);
-                }
+                    else {
+                        try {
+                            this.filewriterREL.append("O\n");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
-                // check attestation
-                int size = authMessage.size() - this.corrector.getNrCorrectingBits() > 0 ?
-                        authMessage.size() - this.corrector.getNrCorrectingBits() :
-                        0;
-                CANAuthMessage canAuthMessage = this.corrector==null ?
-                        new CANAuthMessage(authMessage) :
-                        new CANAuthMessage(authMessage.subList(0, size));
+                        System.out.println("Error in transmission detected! Received: " + authMessage);
+                        this.authMessage = new LinkedList<>();
+                        return "Silence bit";
+                    }
 
-                if (this.protocol.checkAttestationMessage(canAuthMessage)) {
-                    System.out.println("Attestation OK");
+                    // Check attestation
+                    if (this.protocol != null) {
+                        CANAuthMessage auth = new CANAuthMessage(authMessage.subList(0, attSize));
+                        if (this.protocol.checkAttestationMessage(auth)) {
+                            System.out.println("Attestation OK");
+
+                            try {
+                                this.filewriterREL.append("1\n");
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        else {
+                            System.out.println("Attestation NOK");
+
+                            try {
+                                this.filewriterREL.append("O\n");
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                    else {
+                        try {
+                            this.filewriterREL.append("1\n");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    this.authMessage = new LinkedList<>();
+                    return "Silence bit";
                 }
-                else { System.out.println("Attestation NOK"); }
             }
             return "Silence bit";
         }
-
         return "No bit detected";
     }
 
@@ -194,8 +235,8 @@ public class IAT_Monitor implements CANMessageListener {
 
     public void leave() {
         try {
-            this.filewriterIAT.close();
-            // this.filewriterREL.close();
+            // this.filewriterIAT.close();
+            this.filewriterREL.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

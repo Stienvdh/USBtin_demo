@@ -72,7 +72,7 @@ public class IAT_Node extends USBtin {
 
         while (running) {
             try {
-                long timeToSleep = this.getTimeToSleep();
+                long timeToSleep = this.getTimeToSleep()-3;
                 // Save ITT
                 try {
                     this.ITTwriter.append(timeToSleep + ";" + System.currentTimeMillis() + "\n");
