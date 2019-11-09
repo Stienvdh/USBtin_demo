@@ -36,6 +36,7 @@ public class IAT_Monitor implements CANMessageListener {
     private IATBitConverter converter;
     private boolean stopping;
     private boolean starting;
+    private int total_received;
 
     public IAT_Monitor(long period, long delta, int windowLength, int watchid, int channel, long nperiod,
                        int silence_start, int silence_end, IATBitConverter converter) {
@@ -53,10 +54,10 @@ public class IAT_Monitor implements CANMessageListener {
         try {
             new File("timings").mkdir();
             new File("reliability").mkdir();
-            // this.filewriterIAT = new FileWriter("timings/IAT_" + "P" + PERIOD + "_D" + DELTA + "_C" +
-                    // CHANNEL + "_N" + NOISE_PERIOD + ".csv");
-            this.filewriterREL = new FileWriter("reliability/IATrel_" + "_D" + DELTA + "_C" +
+            this.filewriterIAT = new FileWriter("timings/IAT_" + "P" + PERIOD + "_D" + DELTA + "_C" +
                     CHANNEL + "_N" + NOISE_PERIOD + ".csv");
+            // this.filewriterREL = new FileWriter("reliability/IATrel_" + "_D" + DELTA + "_C" +
+            //        CHANNEL + "_N" + NOISE_PERIOD + ".csv");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -80,11 +81,11 @@ public class IAT_Monitor implements CANMessageListener {
             long IAT = currentTime - lastArrival;
 
             // Save IAT
-//            try {
-//                this.filewriterIAT.append(IAT + ";" + System.currentTimeMillis() + "\n");
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                this.filewriterIAT.append(IAT + ";" + System.currentTimeMillis() + "\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             lastArrival = currentTime;
 
@@ -175,13 +176,13 @@ public class IAT_Monitor implements CANMessageListener {
                         System.out.println("DETECTED MESSAGE: " + mess + " COUNTER: " + this.counter);
                     }
                     else {
-                        try {
-                            this.filewriterREL.append("O\n");
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+//                        try {
+//                            this.filewriterREL.append("O\n");
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
 
-                        System.out.println("Error in transmission detected! Received: " + authMessage);
+                        System.out.println("Error in transmission detected! Received: " + authMessage + " COUNTER: " + counter);
                         this.authMessage = new LinkedList<>();
                         return "Silence bit";
                     }
@@ -191,29 +192,32 @@ public class IAT_Monitor implements CANMessageListener {
                         CANAuthMessage auth = new CANAuthMessage(authMessage.subList(0, attSize));
                         if (this.protocol.checkAttestationMessage(auth)) {
                             System.out.println("Attestation OK");
+                            this.total_received++;
 
-                            try {
-                                this.filewriterREL.append("1\n");
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+//                            try {
+//                                this.filewriterREL.append("1\n");
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
                         }
                         else {
                             System.out.println("Attestation NOK");
 
-                            try {
-                                this.filewriterREL.append("O\n");
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+//                            try {
+//                                this.filewriterREL.append("O\n");
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
                         }
                     }
                     else {
-                        try {
-                            this.filewriterREL.append("1\n");
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        this.total_received++;
+
+//                        try {
+//                            this.filewriterREL.append("1\n");
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
                     }
 
                     this.authMessage = new LinkedList<>();
@@ -234,9 +238,11 @@ public class IAT_Monitor implements CANMessageListener {
     }
 
     public void leave() {
+        // statistics
+        System.out.println("Total received: " + this.total_received);
         try {
-            // this.filewriterIAT.close();
-            this.filewriterREL.close();
+            this.filewriterIAT.close();
+            // this.filewriterREL.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

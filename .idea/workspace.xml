@@ -3,11 +3,93 @@
   <component name="ChangeListManager">
     <list default="true" id="8055e118-9048-49a7-a4f5-66851d599956" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/USBtinLibDemo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Monitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/USBtinLibDemo_IAT_noise/transmission_channel/IAT_channel/IAT_Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P100_D10_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P100_D10_C10000_N5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P100_D5_C10000_N5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C10000_N1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C10000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C10000_N2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C10000_N3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D10_C10000_N5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D5_C10000_N1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D5_C10000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D6_C10000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D6_C10000_N3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D6_C10000_N5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel_P200_D7_C10000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D10_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D11_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D12_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D15_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D3_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D4_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D5_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D5_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D6_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reliability/IATrel__D6_C50000_N0.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/USBtinLibDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/USBtinLibDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attestation/AttestationProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/attestation/AttestationProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D20_C10000_N0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/timings/ITT_P200_D20_C10000_N0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P1000_D10_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P100_D10_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P100_D10_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P100_D10_C50000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P100_D10_C50000_N100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P15_D10_C50000_N1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P15_D10_C50000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D10_C10000_N100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D10_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D10_C50000_N1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D10_C50000_N100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C100000_N0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/timings/IAT_P200_D20_C100000_N0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C100000_N200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C10000_N200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P200_D20_C50000_N200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C100000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C100000_N20.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C10000_N20.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N20.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/IAT_P20_D10_C50000_N200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P100_D10_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P100_D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D10_C10000_N0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/timings/ITT_P200_D10_C10000_N0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D11_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D12_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D15_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D3_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D4_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D5_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D5_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D6_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D6_C50000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/ITT_P200_D6_C50000_N2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/IAT_P200_D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/ITT_P200_D20_C10000_N0.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/ITT_plot.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/createfigure.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/fig.fig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/fig.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/fig.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/fig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/fig.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/timings/Timeseries_test/untitled.fig" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,38 +134,38 @@
     <session id="-1829492025">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.3" value="5" />
-          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.3" value="6" />
+          <entry key="project.open.time.4" value="8" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="csv" value="60" />
-          <entry key="java" value="79" />
+          <entry key="csv" value="126" />
+          <entry key="java" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="79" />
-          <entry key="PLAIN_TEXT" value="60" />
+          <entry key="JAVA" value="110" />
+          <entry key="PLAIN_TEXT" value="126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="13" />
           <entry key="dummy" value="7" />
-          <entry key="java" value="20515" />
+          <entry key="java" value="23269" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20515" />
+          <entry key="JAVA" value="23269" />
           <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
@@ -97,8 +179,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+            <state relative-caret-position="216">
+              <caret line="41" selection-start-line="41" selection-end-line="44" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,20 +189,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C50000_N0.csv">
+        <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-318" />
+            <state relative-caret-position="79">
+              <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C10000_N0.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+              <folding>
+                <element signature="e#3260#3261#0" expanded="true" />
+                <element signature="e#3296#3297#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C50000_N0.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -154,7 +250,10 @@
       <find>silence</find>
       <find>system</find>
       <find>writer</find>
+      <find>filewriterREL</find>
       <find>filewriter</find>
+      <find>ittwriter</find>
+      <find>filewriterIAT</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,40 +271,43 @@
         <option value="$PROJECT_DIR$/src/error_correction/SimpleParity.java" />
         <option value="$PROJECT_DIR$/src/error_correction/SimpleCRC.java" />
         <option value="$PROJECT_DIR$/src/USBtin.java" />
-        <option value="$PROJECT_DIR$/src/noise/Noise_node.java" />
         <option value="$PROJECT_DIR$/src/noise/NoiseThread.java" />
         <option value="$PROJECT_DIR$/src/IAT_channel/IATThread.java" />
         <option value="$PROJECT_DIR$/src/IAT_channel/IAT_Node.java" />
         <option value="$PROJECT_DIR$/src/IAT_channel/IAT_Monitor.java" />
-        <option value="$PROJECT_DIR$/src/attestation/AttestationProtocol.java" />
         <option value="$PROJECT_DIR$/src/util/BasicListener.java" />
         <option value="$PROJECT_DIR$/src/IAT_channel/IAT_Thread.java" />
         <option value="$PROJECT_DIR$/src/util/TransmissionThread.java" />
         <option value="$PROJECT_DIR$/src/DLC_channel/DLC_Thread.java" />
         <option value="$PROJECT_DIR$/src/DLC_channel/DLC_Node.java" />
         <option value="$PROJECT_DIR$/src/DLC_channel/DLC_Monitor.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" />
         <option value="$PROJECT_DIR$/src/USBtin/USBtin.java" />
-        <option value="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IATBitConverter.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/OneBitConverter.java" />
-        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" />
         <option value="$PROJECT_DIR$/timings/IAT_P200_D20_C10000_N0.csv" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/TwoBitConverter.java" />
         <option value="$PROJECT_DIR$/timings/Timeseries_test/IAT_P200_D20_C10000_N0.csv" />
+        <option value="$PROJECT_DIR$/src/noise/Noise_node.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java" />
+        <option value="$PROJECT_DIR$/src/host_communication/CANSender.java" />
+        <option value="$PROJECT_DIR$/src/host_communication/CANReceiver.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java" />
+        <option value="$PROJECT_DIR$/src/attestation/AttestationProtocol.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java" />
+        <option value="$PROJECT_DIR$/src/host_communication/SimpleReceiver.java" />
+        <option value="$PROJECT_DIR$/src/attestation/HardCodedAttestation.java" />
+        <option value="$PROJECT_DIR$/src/host_communication/SimpleSender.java" />
         <option value="$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java" />
+        <option value="$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java" />
         <option value="$PROJECT_DIR$/src/USBtinLibDemo.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="94" />
-    <option name="y" value="23" />
-    <option name="width" value="1346" />
-    <option name="height" value="877" />
+    <option name="width" value="714" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -215,8 +317,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,7 +338,19 @@
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
               <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="error_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="attestation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="host_communication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
+              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="noise" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
@@ -251,7 +363,7 @@
               <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="transmission_channel" type="462c0819:PsiDirectoryNode" />
-              <item name="IAT_channel" type="462c0819:PsiDirectoryNode" />
+              <item name="DLC_channel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
@@ -262,19 +374,7 @@
             <path>
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
               <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
               <item name="timings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="USBtinLibDemo_IAT_noise" type="462c0819:PsiDirectoryNode" />
-              <item name="timings" type="462c0819:PsiDirectoryNode" />
-              <item name="Timeseries_test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="USBtinLibDemo_IAT_noise" type="b2602c69:ProjectViewProjectNode" />
@@ -284,10 +384,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572958452519" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573323028593" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -364,6 +466,34 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2539342" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" weight="0.3297568" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24320458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24964234" />
       <window_info id="Image Layers" order="2" />
@@ -390,88 +520,269 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739628" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3566265" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel_P20_D10_C50000_N200.csv" />
-    <entry file="file://$PROJECT_DIR$/src/util/CANAuthMessage.java">
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D4_C50000_N0.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="-1068" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D2_C50000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_detection/SimpleParity.java">
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C50000_N12.csv" />
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D6_C50000_N12.csv" />
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D6_C50000_N3.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="474">
+          <caret line="5216" column="17" lean-forward="true" selection-start-line="5216" selection-start-column="17" selection-end-line="5216" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/FilterValue.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/FilterMask.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/FilterChain.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/CANMessageListener.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/USBtinException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/attestation/AttestationProtocol.java">
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D5_C50000_N3.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="46">
+          <caret line="3217" column="8" lean-forward="true" selection-start-line="3217" selection-start-column="8" selection-end-line="3217" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_detection/ErrorCorrectionCode.java">
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C50000_N0.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="-869">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D4_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D5_C50000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="3230" column="17" lean-forward="true" selection-start-line="3230" selection-start-column="17" selection-end-line="3230" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D4_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D4_C50000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48179" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D3_C50000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="3224" column="13" selection-start-line="3224" selection-start-column="13" selection-end-line="3224" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D3_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34454">
+          <caret line="910" column="4" lean-forward="true" selection-start-line="910" selection-start-column="4" selection-end-line="910" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D3_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-824">
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D3_C50000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D2_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D2_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="3278" lean-forward="true" selection-start-line="3278" selection-end-line="3278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C50000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1124" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D6_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49814" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D5_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53834" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-509">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D4_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D3_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49199" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D3_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C10000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D5_C10000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D4_C10000_N14.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D5_C10000_N3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/noise/Noise_node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="150">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/noise/NoiseThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/attestation/AttestationProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="44" column="94" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/IAT_P200_D10_C10000_N2.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/host_communication/SimpleReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/attestation/HardCodedAttestation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/host_communication/CANSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/host_communication/CANReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/host_communication/SimpleSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -480,261 +791,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/transmission_channel/TransmissionThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/BasicListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/IAT_P200_D10_C10000_N100.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel_P100_D10_C10000_N5.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/USBtin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5835">
-          <caret line="402" column="21" selection-start-line="402" selection-start-column="16" selection-end-line="402" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jssc-2.8.0.jar!/jssc/SerialPort.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9855">
-          <caret line="669" selection-start-line="669" selection-end-line="669" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/USBtin/CANMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/noise/NoiseThread.java">
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="249">
+          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D10_C100000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-591" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/IAT_P200_D20_C100000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D10_C10000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timings/IAT_P200_D10_C10000_N0.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="53" column="42" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+          <folding>
+            <element signature="e#3260#3261#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="79">
+          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Monitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/DLC_channel/DLC_Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/attestation/HardCodedAttestation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IATBitConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/OneBitConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P100_D10_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D20_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/Timeseries_test/ITT_P200_D20_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/IAT_P200_D20_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel_P200_D20_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D10_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/Timeseries_test/IAT_P200_D20_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/TwoBitConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel_P100_D5_C10000_N5.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_detection/SimpleCRC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Monitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="185" column="45" lean-forward="true" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7558#7559#0" expanded="true" />
-            <element signature="e#7600#7601#0" expanded="true" />
-            <element signature="e#7657#7658#0" expanded="true" />
-            <element signature="e#7693#7694#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D20_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D6_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52502" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/transmission_channel/IAT_channel/IAT_Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1228">
-          <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D4_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84993" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D5_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57453" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D4_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="108" column="1" lean-forward="true" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D3_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64728" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D3_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timings/ITT_P200_D6_C50000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48333" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C50000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-318" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D6_C10000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reliability/IATrel__D5_C50000_N0.csv">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/USBtinLibDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        <state relative-caret-position="216">
+          <caret line="41" selection-start-line="41" selection-end-line="44" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

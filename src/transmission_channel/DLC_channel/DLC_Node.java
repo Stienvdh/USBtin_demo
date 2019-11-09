@@ -5,13 +5,14 @@ import USBtin.USBtin;
 import USBtin.USBtinException;
 import attestation.AttestationProtocol;
 import error_detection.ErrorCorrectionCode;
+import host_communication.CANSender;
 import util.CANAuthMessage;
 
 import java.util.List;
 
 import static java.lang.System.err;
 
-public class DLC_Node extends USBtin {
+public class DLC_Node {
 
     private long PERIOD;
     static final public int SILENCE_BIT_DLC=8;
@@ -25,16 +26,18 @@ public class DLC_Node extends USBtin {
     private ErrorCorrectionCode corrector;
     private AttestationProtocol protocol;
     private boolean running = true;
+    private CANSender sender;
 
     private int indexInAuthMessage = 0;
 
-    public DLC_Node(long period) {
+    public DLC_Node(long period, CANSender sender) {
         PERIOD = period;
+        this.sender = sender;
     }
 
-    public void start(CANMessage message) {
+    public void start() {
         if (this.protocol != null) {
-            this.AUTH_MESSAGE = this.protocol.getAttestationMessage(this);
+            this.AUTH_MESSAGE = this.protocol.getAttestationMessage();
         }
         else { return; }
 
@@ -46,8 +49,9 @@ public class DLC_Node extends USBtin {
         while (running) {
             try {
                 Thread.sleep(PERIOD);
+                CANMessage message = this.sender.getMessageToSend();
                 message.setDLC(getDLCToUse(message));
-                this.send(message);
+                this.sender.send(message);
             }
             catch (InterruptedException | USBtinException ex) {
                 err.println(ex);
@@ -109,13 +113,6 @@ public class DLC_Node extends USBtin {
     }
 
     public void leave() {
-        try {
-            this.running = false;
-
-            this.closeCANChannel();
-            this.disconnect();
-        } catch (USBtinException ex) {
-            ex.printStackTrace();
-        }
+        this.running = false;
     }
 }

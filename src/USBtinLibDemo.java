@@ -1,3 +1,7 @@
+import host_communication.CANReceiver;
+import host_communication.CANSender;
+import host_communication.SimpleReceiver;
+import host_communication.SimpleSender;
 import transmission_channel.DLC_channel.DLC_Thread;
 import transmission_channel.IAT_channel.IATBitConverter;
 import transmission_channel.IAT_channel.IAT_Thread;
@@ -15,12 +19,11 @@ import java.io.IOException;
 public class USBtinLibDemo {
 
     private static final long PERIOD = 200;
-    private static final long DELTA = 5;
+    private static final long DELTA = 10;
     private static final int WINDOW_LENGTH = 4;
-    private static final int CHANNEL = 50000;
-    private static final double LOAD = 0.5;
-    //private static final long NOISE_PERIOD = (long) ((68.0/(CHANNEL/1000d))/LOAD) + 10  ; // NOISE_PERIOD=0 --> no noise
-    private static final long NOISE_PERIOD = 0;
+    private static final int CHANNEL = 10000;
+    private static final long NOISE_PERIOD = 0; // NOISE_PERIOD=0 --> no noise
+    // private static final long NOISE_PERIOD = 0;
 
     private static final String SENDER_PORT = "/dev/tty.usbmodemA02183211";
     private static final String RECEIVER_PORT = "/dev/tty.usbmodemA02102821";
@@ -36,11 +39,14 @@ public class USBtinLibDemo {
     private static AttestationProtocol AUTH_PROTOCOL =
             new HardCodedAttestation(new byte[]{1,1,0,0,1}); // Set attestation protocol here
     private static TransmissionThread TRANSMISSION_CHANNEL = // Set transmission channel here
-             new IAT_Thread(PERIOD, DELTA, WINDOW_LENGTH, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
-                    new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}), NOISE_PERIOD, START_SILENCE, END_SILENCE,
-                     CONVERTER);
-             //new DLC_Thread(PERIOD, WATCHID, SENDER_PORT, RECEIVER_PORT, CHANNEL,
-             //       new CANMessage("t100811223344"));
+             new IAT_Thread(PERIOD, DELTA, WINDOW_LENGTH, WATCHID, NOISE_PERIOD, START_SILENCE, END_SILENCE,
+                     CONVERTER, new SimpleReceiver(RECEIVER_PORT, CHANNEL),
+                     new SimpleSender(new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33}),
+                     SENDER_PORT, CHANNEL), CHANNEL);
+//             new DLC_Thread(PERIOD, WATCHID,
+//                    new SimpleReceiver(RECEIVER_PORT, CHANNEL),
+//                     new SimpleSender(new CANMessage(WATCHID, new byte[]{0x11, 0x22, 0x33, 0x44}),
+//                     SENDER_PORT, CHANNEL));
 
     public static void main(String[] args) {
         // Run the transmission thread
@@ -48,10 +54,12 @@ public class USBtinLibDemo {
         TRANSMISSION_CHANNEL.addAttestationProtocol(AUTH_PROTOCOL);
         TRANSMISSION_CHANNEL.start();
 
+        // Start physical nodes
+
         // Run a noise thread
         NoiseThread noise = new NoiseThread(NOISE_PERIOD, CHANNEL, NOISE_PORT,
                 new CANMessage(0x200, new byte[]{0x11, 0x22, 0x33}));
-        //noise.start();
+        noise.start();
 
         // End the channel
         try {

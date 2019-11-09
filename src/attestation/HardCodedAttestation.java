@@ -18,7 +18,7 @@ public class HardCodedAttestation implements AttestationProtocol {
     }
 
     @Override
-    public CANAuthMessage getAttestationMessage(USBtin node) {
+    public CANAuthMessage getAttestationMessage() {
         return new CANAuthMessage(this.message);
     }
 

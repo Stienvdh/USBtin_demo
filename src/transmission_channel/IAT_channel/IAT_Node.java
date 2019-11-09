@@ -5,6 +5,7 @@ import USBtin.CANMessage;
 import USBtin.USBtin;
 import USBtin.USBtinException;
 import error_detection.ErrorCorrectionCode;
+import host_communication.CANSender;
 import util.CANAuthMessage;
 
 import java.io.File;
@@ -13,7 +14,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class IAT_Node extends USBtin {
+public class IAT_Node {
 
     private long PERIOD;
     private int WINDOW_LENGTH;
@@ -21,24 +22,28 @@ public class IAT_Node extends USBtin {
 
     private int placeInWindow = 0;
     private int indexInAuthMessage = 0;
-    private boolean running=true;
+    private boolean running = true;
     private ErrorCorrectionCode corrector;
     private AttestationProtocol protocol;
     private int silence_start;
     private int silence_end;
     private IATBitConverter converter;
-    private FileWriter ITTwriter;
     private long delta;
-    private long channel;
-    private long nperiod;
+    private CANSender host;
 
-    // for silence start/end
+    // statistics
+    private long total_sent = 0;
+    private FileWriter ITTwriter;
+    private long nperiod;
+    private long channel;
+
+    // silence start/end
     private int silence_counter = 0;
     private boolean starting = false;
     private boolean stopping = false;
 
     public IAT_Node(long period, int windowLength, int silence_start, int silence_end, IATBitConverter converter,
-                    long delta, long channel, long nperiod) {
+                    long delta, long channel, long nperiod, CANSender host) {
         PERIOD = period;
         WINDOW_LENGTH = windowLength;
 
@@ -48,11 +53,13 @@ public class IAT_Node extends USBtin {
         this.delta = delta;
         this.channel = channel;
         this.nperiod = nperiod;
+
+        this.host = host;
     }
 
-    public void start(CANMessage message) {
+    public void start() {
         if (this.protocol != null) {
-            this.AUTH_MESSAGE = this.protocol.getAttestationMessage(this);
+            this.AUTH_MESSAGE = this.protocol.getAttestationMessage();
         }
         else { return; }
 
@@ -80,16 +87,16 @@ public class IAT_Node extends USBtin {
                     e.printStackTrace();
                 }
                 Thread.sleep(timeToSleep);
-                this.send(message);
+
+                this.host.sendMessage(this.host.getMessageToSend());
             }
-            catch (InterruptedException | USBtinException ex) {
+            catch (InterruptedException ex) {
                 System.err.println(ex);
             }
         }
     }
 
     public long getTimeToSleep() {
-
 
         List<Byte> auth_bytes = this.AUTH_MESSAGE.toByteArray();
 
@@ -134,6 +141,7 @@ public class IAT_Node extends USBtin {
                 else {
                     stopping = false;
                     silence_counter = 0;
+                    this.total_sent++;
                 }
             }
             if (!starting) {
@@ -165,12 +173,11 @@ public class IAT_Node extends USBtin {
 
     public void leave() {
         running = false;
+        System.out.println("Total sent: " + this.total_sent);
         try {
-            this.closeCANChannel();
-            this.disconnect();
             this.ITTwriter.close();
         }
-        catch (USBtinException | IOException ex) {
+        catch (IOException ex) {
             ex.printStackTrace();
         }
     }
@@ -182,4 +189,5 @@ public class IAT_Node extends USBtin {
     public void setProtocol(AttestationProtocol prot) {
         this.protocol = prot;
     }
+
 }

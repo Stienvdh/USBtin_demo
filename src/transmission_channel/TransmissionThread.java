@@ -2,6 +2,8 @@ package transmission_channel;
 
 import attestation.AttestationProtocol;
 import error_detection.ErrorCorrectionCode;
+import host_communication.CANReceiver;
+import host_communication.CANSender;
 
 public abstract class TransmissionThread extends Thread {
 

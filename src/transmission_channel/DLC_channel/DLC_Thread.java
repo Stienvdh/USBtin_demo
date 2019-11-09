@@ -3,74 +3,56 @@ package transmission_channel.DLC_channel;
 import USBtin.CANMessage;
 import USBtin.USBtin;
 import USBtin.USBtinException;
+import host_communication.CANReceiver;
+import host_communication.CANSender;
 import transmission_channel.TransmissionThread;
 
 public class DLC_Thread extends TransmissionThread {
 
     private long PERIOD;
     private int WATCHID;
-    private int CHANNEL;
-    private String sender_port;
-    private String receiver_port;
-    private DLC_Node sender;
-    private DLC_Monitor monitor;
-    private USBtin receiver;
-    private CANMessage message;
+    private DLC_Node DLC_sender;
+    private DLC_Monitor DLC_monitor;
+    private CANSender host_sender;
+    private CANReceiver host_receiver;
     private boolean running = true;
 
-    public DLC_Thread(long period, int watchid, String sender, String receiver, int channel, CANMessage mess) {
+    public DLC_Thread(long period, int watchid, CANReceiver receiver, CANSender sender) {
         this.PERIOD = period;
         this.WATCHID = watchid;
-        this.sender_port = sender;
-        this.receiver_port = receiver;
-        this.CHANNEL = channel;
-        this.message = mess;
+        this.host_sender = sender;
+        this.host_receiver = receiver;
     }
 
     public void run() {
-        try {
-            // create the instances
-            DLC_Node sender = new DLC_Node(this.PERIOD);
-            USBtin listener = new USBtin();
-            DLC_Monitor monitor = new DLC_Monitor(this.WATCHID);
+        // create the instances
+        DLC_Node sender = new DLC_Node(this.PERIOD, this.host_sender);
+        DLC_Monitor monitor = new DLC_Monitor(this.WATCHID);
 
-            this.sender = sender;
-            this.receiver = listener;
-            this.monitor = monitor;
+        this.DLC_sender = sender;
+        this.DLC_monitor = monitor;
 
-            // add error detection
-            if (this.getCorrector() != null) {
-                this.sender.setCorrector(this.getCorrector());
-                this.monitor.setCorrector(this.getCorrector());
-            }
-
-            // add attestation protocol
-            if (this.getAttestationProtocol() != null) {
-                this.sender.setAttestation(this.getAttestationProtocol());
-                this.monitor.setAttestation(this.getAttestationProtocol());
-            }
-
-            // connect to USBtin.USBtin and open CAN channel in Active-Mode
-            sender.connect(this.sender_port);
-            listener.connect(this.receiver_port);
-            listener.addMessageListener(monitor);
-
-            sender.openCANChannel(CHANNEL, USBtin.OpenMode.ACTIVE);
-            listener.openCANChannel(CHANNEL, USBtin.OpenMode.ACTIVE);
-
-            sender.start(message);
-        } catch (USBtinException ex) {
-            ex.printStackTrace();
+        // add error detection
+        if (this.getCorrector() != null) {
+            this.DLC_sender.setCorrector(this.getCorrector());
+            this.DLC_monitor.setCorrector(this.getCorrector());
         }
+
+        // add attestation protocol
+        if (this.getAttestationProtocol() != null) {
+            this.DLC_sender.setAttestation(this.getAttestationProtocol());
+            this.DLC_monitor.setAttestation(this.getAttestationProtocol());
+        }
+
+        // connect to USBtin.USBtin and open CAN channel in Active-Mode
+        host_receiver.addMessageListener(monitor);
+
+        DLC_sender.start();
     }
 
     public void end() {
-        try {
-            sender.leave();
-            receiver.closeCANChannel();
-            receiver.disconnect();
-        } catch (USBtinException ex) {
-            ex.printStackTrace();
-        }
+        this.host_receiver.closedCC();
+        this.host_sender.closedCC();
+        DLC_sender.leave();
     }
 }

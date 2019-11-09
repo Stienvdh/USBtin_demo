@@ -4,7 +4,7 @@ import util.CANAuthMessage;
 import USBtin.USBtin;
 
 public interface AttestationProtocol {
-    CANAuthMessage getAttestationMessage(USBtin node);
+    CANAuthMessage getAttestationMessage();
 
     boolean checkAttestationMessage(CANAuthMessage message);
 }
